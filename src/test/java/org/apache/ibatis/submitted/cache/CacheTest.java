@@ -134,6 +134,15 @@ class CacheTest {
       Assertions.assertEquals(2, pm.findAll().size());
     }
 
+    //与上面相同，（）里放需要关闭的连接，不用写finally就可自动关闭
+//    SqlSession sqlSession1 = sqlSessionFactory.openSession(true);
+//    try{
+//      PersonMapper pm = sqlSession1.getMapper(PersonMapper.class);
+//      Assertions.assertEquals(2, pm.findAll().size());
+//    }finally {
+//      sqlSession1.close();
+//    }
+
 
     try (SqlSession sqlSession2 = sqlSessionFactory.openSession(true)) {
       PersonMapper pm = sqlSession2.getMapper(PersonMapper.class);

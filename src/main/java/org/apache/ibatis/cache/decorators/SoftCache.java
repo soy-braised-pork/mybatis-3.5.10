@@ -23,7 +23,7 @@ import java.util.LinkedList;
 import org.apache.ibatis.cache.Cache;
 
 /**
- * Soft Reference cache decorator
+ * Soft Reference cache decorator    JVM软引用淘汰策略缓存
  * Thanks to Dr. Heinz Kabutz for his guidance here.
  *
  * @author Clinton Begin

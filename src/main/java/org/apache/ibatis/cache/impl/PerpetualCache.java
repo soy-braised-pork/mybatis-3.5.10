@@ -28,6 +28,7 @@ public class PerpetualCache implements Cache {
 
   private final String id;
 
+  //维护 HashMap 来实现缓存
   private final Map<Object, Object> cache = new HashMap<>();
 
   public PerpetualCache(String id) {

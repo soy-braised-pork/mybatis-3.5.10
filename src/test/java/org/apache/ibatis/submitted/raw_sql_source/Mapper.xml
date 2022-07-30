@@ -22,6 +22,8 @@
 
 <mapper namespace="org.apache.ibatis.submitted.raw_sql_source.Mapper">
 
+  <!-- #{} 预编译替换  将sql中的#{}替换为 ？，调用PreparedStatement的set方法来赋值    有效防止sql注入
+       ${} 字符串替换  将sql中的${}替换为 变量的值-->
     <select id="getUser1" resultType="org.apache.ibatis.submitted.raw_sql_source.User">
         select * from users where id = #{value}
     </select>

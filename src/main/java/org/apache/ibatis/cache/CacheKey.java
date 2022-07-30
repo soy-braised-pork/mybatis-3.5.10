@@ -24,6 +24,7 @@ import org.apache.ibatis.reflection.ArrayUtil;
 
 /**
  * @author Clinton Begin
+ * 缓存map的 key
  */
 public class CacheKey implements Cloneable, Serializable {
 
